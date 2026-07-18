@@ -19,7 +19,7 @@
             [tanemaki.methods.coverage-report :as coverage]
             [tanemaki.methods.propose :as propose]))
 
-(def actor-dir (-> *file* io/file .getParentFile .getParentFile))
+(def actor-dir (-> *file* io/file .getParentFile .getParentFile .getParentFile .getParentFile))
 (def seed (io/file actor-dir "data" "seed-stewardship-graph.kotoba.edn"))
 
 (defn- load* [] (analyze/load-file* seed))

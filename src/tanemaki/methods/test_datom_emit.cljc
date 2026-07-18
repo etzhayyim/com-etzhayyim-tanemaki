@@ -12,7 +12,7 @@
             [tanemaki.methods.analyze :as analyze]
             [tanemaki.methods.datom-emit :as datom-emit]))
 
-(def actor-dir (-> *file* io/file .getParentFile .getParentFile))
+(def actor-dir (-> *file* io/file .getParentFile .getParentFile .getParentFile .getParentFile))
 (def seed (io/file actor-dir "data" "seed-stewardship-graph.kotoba.edn"))
 
 (defn load-seed [] (analyze/load-file* seed))

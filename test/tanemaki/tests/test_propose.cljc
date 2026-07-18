@@ -20,7 +20,7 @@
             [tanemaki.methods.propose :as propose]
             [tanemaki.methods.cid :as cid]))
 
-(def actor-dir (-> *file* io/file .getParentFile .getParentFile))
+(def actor-dir (-> *file* io/file .getParentFile .getParentFile .getParentFile .getParentFile))
 (def seed (io/file actor-dir "data" "seed-stewardship-graph.kotoba.edn"))
 
 (defn graph [] (analyze/load-file* seed))
